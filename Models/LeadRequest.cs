@@ -15,7 +15,7 @@ namespace SalesforceWebHook.Models
 
         public class New
         {
-            //public Attributes attributes { get; set; }
+            public Attributes attributes { get; set; }
             public DateTime LastModifiedDate { get; set; }
             public string Email { get; set; }
             public bool DoNotCall { get; set; }
