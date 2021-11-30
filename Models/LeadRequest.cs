@@ -23,10 +23,8 @@ namespace SalesforceWebHook.Models
             public string Website { get; set; }
             public string Salutation { get; set; }
             public string OwnerId { get; set; }
-            [System.Text.Json.Serialization.JsonIgnore]
             public string CreatedById { get; set; }
             public string Phone { get; set; }
-            [System.Text.Json.Serialization.JsonIgnore]
             public string LastModifiedByID { get; set; }
             public string Status { get; set; }
             public bool IsDeleted { get; set; }
@@ -60,8 +58,7 @@ namespace SalesforceWebHook.Models
             public bool HasOptedOutOfFax { get; set; }
             public string Website { get; set; }
             public string Salutation { get; set; }
-            public string OwnerId { get; set; }
-            [Newtonsoft.Json.JsonProperty("CreatedById")]
+            public string OwnerId { get; set; }            
             public string CreatedById { get; set; }
             public string Phone { get; set; }
             public string LastModifiedByID { get; set; }
@@ -74,8 +71,7 @@ namespace SalesforceWebHook.Models
             public string Gender__c { get; set; }
             public string City { get; set; }
             public DateTime SystemModstamp { get; set; }
-            public string Trail__c { get; set; }
-            [Newtonsoft.Json.JsonProperty("CreatedByID")]
+            public string Trail__c { get; set; }            
             public string CreatedByID { get; set; }
             public string State { get; set; }
             public DateTime CreatedDate { get; set; }

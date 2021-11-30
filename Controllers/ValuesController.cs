@@ -33,9 +33,11 @@ namespace SalesforceWebHook.Controllers
         [Route("lead")]
         public ResponseNew Post(Object value)
         {            
+
             Root res = JsonConvert.DeserializeObject<Root>(value.ToString());
-            New resp = res.@new.FirstOrDefault();
-            var x = _map.Map<ResponseNew>(resp);
+                      
+
+            var x = _map.Map<ResponseNew>(res.@new.FirstOrDefault());
 
             return x;
         }

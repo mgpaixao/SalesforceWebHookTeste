@@ -12,9 +12,15 @@ namespace SalesforceWebHook
     public class AutoMapper : Profile
     {
         public AutoMapper()
-        {
-            CreateMap<New, ResponseNew>();
-            CreateMap<ResponseNew, New>();
+        { 
+                        
+            CreateMap<LeadRequest.Attributes, Response.Attributes>();
+
+            CreateMap<New, ResponseNew>()
+                .ForMember(
+                dest => dest.attributes,
+                opt => opt.MapFrom(src => src.attributes));
         }
+
     }
 }
